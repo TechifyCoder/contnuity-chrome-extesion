@@ -112,8 +112,6 @@ contnuity-chrome-extension/
 ---
 
 ## 🔗 Related Projects
-
-- **[Consistify Mobile App](../consistify-app/)** — React Native + Expo app for habit tracking
 - **[Consistify Backend](../consistify-backend/)** — Express.js API server for data sync and analytics
 
 ---
