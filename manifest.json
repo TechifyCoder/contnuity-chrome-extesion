@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Continuity",
+  "version": "3.0.0",
+  "description": "Privacy-focused productivity tracking & website time management",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "idle"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.udemy.com/*"
+      ],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["blocker.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
